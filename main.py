@@ -26,7 +26,7 @@ def main():
                 game.play_quiz()
 
             elif choice == "2":
-                print("퀴즈 추가 기능 준비 중")
+                game.add_quiz()
 
             elif choice == "3":
                 print("퀴즈 목록 기능 준비 중")

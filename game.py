@@ -52,3 +52,49 @@ class QuizGame:
         print(f"결과: {total}문제 중 {correct_count}문제 정답")
         print(f"최종 점수: {score}점")
         print("==============================")
+
+    def add_quiz(self):
+        print("\n새로운 퀴즈를 추가합니다.")
+
+        while True:
+            question = input("문제를 입력하세요: ").strip()
+
+            if question:
+                break
+
+            print("문제 내용을 입력해주세요.")
+
+        choices = []
+
+        for number in range(1, 5):
+            while True:
+                choice = input(f"선택지 {number}: ").strip()
+
+                if choice:
+                    choices.append(choice)
+                    break
+
+                print("선택지를 입력해주세요.")
+
+        while True:
+            user_input = input("정답 번호 (1~4): ").strip()
+
+            try:
+                answer = int(user_input)
+            except ValueError:
+                print("숫자를 입력해주세요.")
+                continue
+
+            if answer < 1 or answer > 4:
+                print("1~4 사이의 숫자를 입력하세요.")
+                continue
+
+            break
+
+        from quiz import Quiz
+
+        new_quiz = Quiz(question, choices, answer)
+        self.quizzes.append(new_quiz)
+
+        print("\n퀴즈가 추가되었습니다!")
+        print(f"현재 퀴즈 수: {len(self.quizzes)}개")
