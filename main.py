@@ -43,8 +43,13 @@ def main():
             else:
                 print("1~5번 중에서 선택하세요.")
 
+    
     except (KeyboardInterrupt, EOFError):
         print("\n입력이 중단되어 안전하게 종료합니다.")
+
+    finally:
+        game.save_state()
+
 
 
 if __name__ == "__main__":

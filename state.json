@@ -1,0 +1,67 @@
+{
+    "quizzes": [
+        {
+            "question": "Python에서 변수에 숫자 10을 저장하는 올바른 코드는?",
+            "choices": [
+                "x == 10",
+                "x = 10",
+                "10 = x",
+                "x -> 10"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Python에서 문자열을 나타내는 자료형은?",
+            "choices": [
+                "int",
+                "str",
+                "bool",
+                "list"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "여러 개의 데이터를 순서대로 저장하는 자료형은?",
+            "choices": [
+                "int",
+                "bool",
+                "list",
+                "str"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "조건에 따라 다른 코드를 실행하는 키워드는?",
+            "choices": [
+                "while",
+                "if",
+                "def",
+                "return"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Python에서 함수를 정의할 때 사용하는 키워드는?",
+            "choices": [
+                "class",
+                "print",
+                "for",
+                "def"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "Python에서 자료의 개수를 확인하는 함수는?",
+            "choices": [
+                "len",
+                "print",
+                "input",
+                "str"
+            ],
+            "answer": 1
+        }
+    ],
+    "best_score": 83,
+    "best_correct": 5,
+    "best_total": 6
+}
