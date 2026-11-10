@@ -29,7 +29,7 @@ def main():
                 game.add_quiz()
 
             elif choice == "3":
-                print("퀴즈 목록 기능 준비 중")
+                game.list_quizzes()
 
             elif choice == "4":
                 print("점수 확인 기능 준비 중")
