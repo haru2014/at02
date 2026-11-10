@@ -3,9 +3,13 @@ from questions import create_default_quizzes
 
 
 class QuizGame:
+    
     def __init__(self):
         self.quizzes = create_default_quizzes()
         self.best_score = None
+        self.best_correct = None
+        self.best_total = None
+
 
     def play_quiz(self):
         if not self.quizzes:
@@ -47,6 +51,13 @@ class QuizGame:
                 print(f"오답입니다. 정답은 {quiz.answer}번입니다.")
 
         score = round(correct_count / total * 100)
+
+        if self.best_score is None or score > self.best_score:
+            self.best_score = score
+            self.best_correct = correct_count
+            self.best_total = total
+            print("\n새로운 최고 점수를 기록했습니다!")
+
 
         print("\n==============================")
         print(f"결과: {total}문제 중 {correct_count}문제 정답")
@@ -114,3 +125,19 @@ class QuizGame:
             print(f"\n[{number}] {quiz.question}")
 
         print("\n==============================")
+
+    def show_score(self):
+        print("\n==============================")
+        print("       최고 점수 확인")
+        print("==============================")
+
+        if self.best_score is None:
+            print("아직 퀴즈를 푼 기록이 없습니다.")
+        else:
+            print(f"최고 점수: {self.best_score}점")
+            print(
+                f"정답 기록: {self.best_total}문제 중 "
+                f"{self.best_correct}문제 정답"
+            )
+
+        print("==============================")

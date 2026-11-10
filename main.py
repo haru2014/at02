@@ -31,8 +31,10 @@ def main():
             elif choice == "3":
                 game.list_quizzes()
 
+            
             elif choice == "4":
-                print("점수 확인 기능 준비 중")
+                game.show_score()
+
 
             elif choice == "5":
                 print("게임을 종료합니다.")
