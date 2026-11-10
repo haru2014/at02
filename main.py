@@ -1,4 +1,7 @@
 
+from game import QuizGame
+
+
 def show_menu():
     print("\n==============================")
     print("      PyQuest 퀴즈 게임")
@@ -12,14 +15,15 @@ def show_menu():
 
 
 def main():
-    while True:
-        show_menu()
+    game = QuizGame()
 
-        try:
+    try:
+        while True:
+            show_menu()
             choice = input("번호를 선택하세요: ").strip()
 
             if choice == "1":
-                print("퀴즈 풀기 기능 준비 중")
+                game.play_quiz()
 
             elif choice == "2":
                 print("퀴즈 추가 기능 준비 중")
@@ -37,9 +41,8 @@ def main():
             else:
                 print("1~5번 중에서 선택하세요.")
 
-        except (KeyboardInterrupt, EOFError):
-            print("\n안전하게 종료합니다.")
-            break
+    except (KeyboardInterrupt, EOFError):
+        print("\n입력이 중단되어 안전하게 종료합니다.")
 
 
 if __name__ == "__main__":
