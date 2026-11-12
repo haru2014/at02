@@ -123,3 +123,10 @@ at02/
 
 GitHub 저장소:
 https://github.com/haru2014/at02
+
+## 11. Git clone 및 pull 실습
+
+GitHub 저장소를 at02_clone 폴더에 복제했습니다.
+
+복제된 저장소에서 README 파일을 수정하여
+Git의 clone, commit, push, pull 과정을 실습합니다.
